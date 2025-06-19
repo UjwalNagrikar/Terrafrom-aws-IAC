@@ -37,7 +37,7 @@ resource "aws_security_group" "my-security-group" {
 
 resource "aws_instance" "my-Server" {
   
-  ami = "ami-0f918f7e67a3323f0"
+  ami = "ami-0f918f7e67a3323io"
   instance_type = "t2.micro"
   key_name = "Ujwal-SRE"
 
