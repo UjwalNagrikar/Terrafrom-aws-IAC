@@ -79,7 +79,3 @@ Please ensure to follow best practices:
 - Maintain proper documentation
 - Follow Terraform best practices
 - Keep security in mind when modifying configurations
-
-## License
-
-MIT License
