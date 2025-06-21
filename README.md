@@ -216,9 +216,7 @@ terraform destroy
 - [Terraform Best Practices](https://www.terraform.io/docs/cloud/guides/recommended-practices/index.html)
 - [AWS Security Best Practices](https://aws.amazon.com/architecture/security-identity-compliance/)
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
 
