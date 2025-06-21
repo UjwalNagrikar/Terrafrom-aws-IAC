@@ -2,7 +2,7 @@
 
 [![Terraform](https://img.shields.io/badge/Terraform-1.0+-623CE4?logo=terraform&logoColor=white)](https://www.terraform.io/)
 [![AWS](https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 
 A comprehensive Terraform-based Infrastructure as Code project for deploying and managing AWS resources including VPC, EC2 instances, and security configurations.
 
