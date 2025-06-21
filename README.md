@@ -18,7 +18,7 @@ This project provisions a complete AWS infrastructure stack with:
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 .
 ├── aws-ec2/                 # Standalone EC2 configurations
 │   ├── main.tf
@@ -36,7 +36,7 @@ This project provisions a complete AWS infrastructure stack with:
 │   ├── outputs.tf
 │   └── provider.tf
 └── README.md
-\`\`\`
+```
 
 ## 🚀 Quick Start
 
@@ -51,50 +51,50 @@ Before you begin, ensure you have the following installed:
 ### AWS Configuration
 
 1. **Configure AWS CLI:**
-   \`\`\`bash
+   ```bash
    aws configure
-   \`\`\`
+   ```
 
 2. **Verify AWS credentials:**
-   \`\`\`bash
+   ```bash
    aws sts get-caller-identity
-   \`\`\`
+   ```
 
 ### Deployment Options
 
 Choose one of the following deployment approaches:
 
 #### Option 1: Complete VPC Infrastructure (Recommended)
-\`\`\`bash
+```bash
 cd aws-vpc/
 terraform init
 terraform plan
 terraform apply
-\`\`\`
+```
 
 #### Option 2: Standalone EC2 Instance
-\`\`\`bash
+```bash
 cd aws-ec2/
 terraform init
 terraform plan
 terraform apply
-\`\`\`
+```
 
 #### Option 3: EC2 with Custom Security Group
-\`\`\`bash
+```bash
 cd aws-security_group/
 terraform init
 terraform plan
 terraform apply
-\`\`\`
+```
 
 #### Option 4: Module-based Deployment
-\`\`\`bash
+```bash
 cd modules/
 terraform init
 terraform plan
 terraform apply
-\`\`\`
+```
 
 ## 📋 Infrastructure Components
 
@@ -150,7 +150,7 @@ Each module provides specific outputs:
 ## 🔧 Recommended Improvements
 
 ### 1. Security Enhancements
-\`\`\`hcl
+```hcl
 # Example: Restrict SSH access to specific IP
 ingress {
   from_port   = 22
@@ -158,11 +158,11 @@ ingress {
   protocol    = "tcp"
   cidr_blocks = ["YOUR_IP/32"]  # Replace with your IP
 }
-\`\`\`
+```
 
 ### 2. Variable Configuration
 Create `variables.tf` files for configurable values:
-\`\`\`hcl
+```hcl
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
@@ -174,24 +174,24 @@ variable "allowed_cidr_blocks" {
   type        = list(string)
   default     = ["0.0.0.0/0"]
 }
-\`\`\`
+```
 
 ### 3. Environment-Specific Configurations
 Use Terraform workspaces or separate directories for different environments:
-\`\`\`bash
+```bash
 terraform workspace new production
 terraform workspace new staging
 terraform workspace new development
-\`\`\`
+```
 
 ## 🧹 Cleanup
 
 To destroy all resources and avoid AWS charges:
 
-\`\`\`bash
+```bash
 # In the respective directory
 terraform destroy
-\`\`\`
+```
 
 **⚠️ Warning**: This will permanently delete all resources. Ensure you have backups if needed.
 
@@ -226,3 +226,7 @@ For questions or issues:
 - Create an issue in this repository
 - Check existing documentation
 - Review AWS and Terraform documentation
+
+---
+
+**Note**: This project is for educational and development purposes. Please review security configurations before using in production environments.
