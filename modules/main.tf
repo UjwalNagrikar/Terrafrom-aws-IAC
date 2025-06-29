@@ -15,7 +15,7 @@ module "vpc" {
 }
 
 resource "aws_instance" "my-ec2" {
-  ami            = "ami-0b09627181c8d5668"
+  ami            = "ami-0b09627181c8d5778"
   instance_type  = "t2.micro"
   subnet_id      = module.vpc.public_subnets[0]
   tags = {
